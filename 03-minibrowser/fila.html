@@ -1,0 +1,74 @@
+<script>
+console.log('Fila/Kewk');
+
+//pessoas = Qualquer tipo de dado num/texto/objetos
+//uma atrás da outra = ordem importa
+//quem entra primeiro sai primeiro 
+
+//const para criar variável
+//array do js usa ele como fila (list/interable) = guardar várias informações
+var fila = [
+    'script.js',
+    'style.css',
+    'imagem.png'
+];
+
+//adiciona na fila
+fila.push('petisco.png');
+//remove o primeiro da fila
+fila.shift('');
+
+
+//======================
+//receita para criar filas
+//========================
+// - enqueue - enfileirar
+// - dequeue - desenfileirar
+
+class Queue { //receita para criar objetos - class
+    
+    constructor() {
+        this.data = [];
+    }
+    
+    
+    print() {
+        console.log(this.data);
+
+
+    }
+    
+    
+    enqueue(item) {
+        this.data.push(item);
+
+    }
+
+    dequeue() {
+        this.data.shift();
+
+    }
+
+
+}
+
+
+//design first do código
+
+
+var requests = new Queue ();
+
+//open closed
+//open = aberto para extensão
+//closed = fechado para modificação
+
+requests.enqueue('scripts.js');
+requests.print();
+requests.dequeue();
+requests.enqueue('style.css');
+requests.enqueue('imagem.png');
+requests.enqueue('petisco.png');
+requests.print();
+
+
+</script>
